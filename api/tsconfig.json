@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "erasableSyntaxOnly": true,
+        "allowArbitraryExtensions": true,
+        "noEmit": true,
+    }
+}
