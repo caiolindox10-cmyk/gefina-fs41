@@ -1,26 +1,101 @@
 <!DOCTYPE html>
 <html pt="br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Gefina</title>
-    </head>
-    <body>
-        <div>
-        </div>
-        <script
-         crossoriginsrc='https://unpkg.com/react@18/umd/react.development.js'>     
-        </script
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gefina</title>
+</head>
+
+<body>
+    <div>
+    </div>
+    <script crossoriginsrc='https://unpkg.com/react@18/umd/react.development.js'>
+    </script
         crossoriginsrc='https://unpkg.com/react-dom@18/umd/react-dom.development.js'>
         </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js">
+    </script>
 
-        <script>
-            const container = document.querySelector9('div')
+    <script type='text/babel'>
+        const container = document.querySelector9('div')
 
-            const root = ReactDOM.createRoot(container);
+        const root = ReactDOM.createRoot(container);
 
-            const title = <h1>React Course</h1>;
+        const invoices: Invoice[] = [{
+            id: 1,
+            amount: 125039,
+            status: 'pending',
+            issueDate: '2026-10-07',
+            dueDate: '2026-11-05',
+            customer: {
+                id: 1,
+                name: 'Construtura Meridiano',
+                email: 'contato@meridiano.com.br',
+            }
+        }, {
+            id: 2,
+            amount: 15340,
+            status: 'paid',
+            issueDate: '2026-09-03',
+            dueDate: '2026-10-05',
+            customer: {
+                id: 2,
+                name: 'Gráfica Nova',
+                email: 'nova@grafica.com.br',
+            }
+        }, {
+            id: 3,
+            amount: 833457,
+            status: 'pending',
+            issueDate: '07-10-2026',
+            dueDate: '05-11-2026',
+            customer: {
+                id: 3,
+                name: 'Mendes Engenharia',
+                email: 'contato@mendesengenharia.com.br',
+            }
+        }];
 
-            root.render(title)
-        </script>
-    </body>
+        const title = () => {
+            return <h1>Faturas</h1>
+        };
+
+        const TableRow = (props.) => {
+            return <tr>
+                <td>{props.invoice.custumer.name}</td>
+                <td>{props.data.amont}</td>
+                <td>{props.data.issueData}</td>
+                <td>{props.data.dueData}</td>
+                <td>{props.data.status}</td>
+                    </tr>
+        }
+
+        const Table = () => {
+            return <table>
+                <thead>
+                    <tr>
+                    <th>Cliente</th>
+                    <th>Valor</th>
+                    <th>Emissão</th>
+                    <th>Vencimento</th>
+                    <th>Situação</th>
+                    </tr>
+                </thead>
+                <body>
+                    <th>Caio Marques</th>
+                    <th><R1>R$ 4000,67</R1></th>
+                    <th>26/12/2026</th>
+                    <th>27/12/2026</th>
+                    <th>Pendente</th>
+                </body>
+            </table>
+        };
+
+        root.render(<div>
+            <Title value/>
+            <Table />
+        </div>)
+    </script>
+</body>
+
 </html>
