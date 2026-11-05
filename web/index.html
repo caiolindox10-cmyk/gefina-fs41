@@ -1,68 +1,16 @@
-<!DOCTYPE html>
-<html pt="br">
+<!doctype html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Gefina</title>
-</head>
+<html lang='pt-br'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Gefina</title>
+    </head>
+    <body>
+        <div></div>
 
-<body>
-    <div>
-    </div>
-
-    <sricpt src='./src/main.tsx'></sricpt>
-    <script crossoriginsrc='https://unpkg.com/react@18/umd/react.development.js'>
-    </script
-        crossoriginsrc='https://unpkg.com/react-dom@18/umd/react-dom.development.js'>
+        <script
+            type='module'
+            src='./main.tsx'>
         </script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js">
-    </script>
-
-    <script type='text/babel'>
-        const container = document.querySelector9('div')
-
-        const root = ReactDOM.createRoot(container);
-
-        const title = () => {
-            return <h1>Faturas</h1>
-        };
-
-        const TableRow = (props.) => {
-            return <tr>
-                <td>{props.invoice.custumer.name}</td>
-                <td>{props.data.amont}</td>
-                <td>{props.data.issueData}</td>
-                <td>{props.data.dueData}</td>
-                <td>{props.data.status}</td>
-                    </tr>
-        }
-
-        const Table = () => {
-            return <table>
-                <thead>
-                    <tr>
-                    <th>Cliente</th>
-                    <th>Valor</th>
-                    <th>Emissão</th>
-                    <th>Vencimento</th>
-                    <th>Situação</th>
-                    </tr>
-                </thead>
-                <body>
-                    <th>Caio Marques</th>
-                    <th><R1>R$ 4000,67</R1></th>
-                    <th>26/12/2026</th>
-                    <th>27/12/2026</th>
-                    <th>Pendente</th>
-                </body>
-            </table>
-        };
-
-        root.render(<div>
-            <Title value/>
-            <Table />
-        </div>)
-    </script>
-</body>
-
+    </body>
 </html>

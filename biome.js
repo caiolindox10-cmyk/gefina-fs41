@@ -1,16 +1,2 @@
-{
-    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-    "formatter": {
-        "indentStyle": 'space',
-        "indenwidth": 2
-    }
-    "javascript": {
-        "formatter": {
-            "quoteStyle": "single",
-            "semicolons": "always"
-            "trailingComas":
-        }
-
-    }
-
-}
+// A configuração do Biome precisa estar em um arquivo JSON.
+module.exports = require('./biome.json');
